@@ -38,7 +38,7 @@ const MessageForm = () => {
         myForm.set("message",message);
       
        try{
-        setLoading(true);
+        
          const response = await axios.post("https://hospital-management-system-v5ju.onrender.com/api/v1/message/send", myForm, {
           headers: {
             "Content-Type": "multipart/form-data", 
@@ -56,10 +56,10 @@ const MessageForm = () => {
               })
 
             }
-            setLoading(false);
+            
         } catch(error){
           console.log(error.response);
-          setLoading(false);
+          
           toast.error(error.response.data.message);
         }
           
