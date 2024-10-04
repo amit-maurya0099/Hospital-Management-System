@@ -21,7 +21,7 @@ cloudinary.v2.config({
 })
 
 app.use(cors({
-    origin:'https://hospital-management-system-iye49knqv.vercel.app',
+    origin:'https://hospital-management-system-eight-chi.vercel.app',
     methods:["GET","POST","PUT","DELETE"],
     credentials:true
 }))
