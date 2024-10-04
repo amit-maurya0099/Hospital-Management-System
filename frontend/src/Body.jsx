@@ -28,7 +28,7 @@ const Body = () => {
     }
   return (
     <>
-    {loading ? <Loader/> :
+    
     <div className="bg-sky-200 bg-gradient-to-r from-white min-h-screen w-full pt-2  md:px-[10%] font-serif ">
     
        <div className='md:flex justify-between md:pt-20'>
@@ -81,7 +81,7 @@ const Body = () => {
 
       
     </div>
-}
+
     </>
   )
 }
