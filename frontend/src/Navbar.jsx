@@ -14,10 +14,10 @@ const Navbar = () => {
             setLoading(true)
             let url;
             if(user.role==="Admin"){
-                url="http://localhost:4000/api/v1/user/admin/logout"
+                url="https://hospital-management-system-v5ju.onrender.com/api/v1/user/admin/logout"
             }
             else if(user.role==="Patient"){
-                url="http://localhost:4000/api/v1/user/patient/logout"
+                url="https://hospital-management-system-v5ju.onrender.com/api/v1/user/patient/logout"
             }
 
             const response=await axios.get(url,{withCredentials:true})
