@@ -62,7 +62,7 @@ const Register = () => {
 
         try {
           setLoading(true);
-           const response=await axios.post("http://localhost:4000/api/v1/user/patient/register",myForm)
+           const response=await axios.post("https://hospital-management-system-v5ju.onrender.com/api/v1/user/patient/register",myForm)
 
            if(response.status===200){
               toast.success(response.data.message);

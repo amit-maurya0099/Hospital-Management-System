@@ -62,7 +62,7 @@ const Appointment = () => {
 
           try {
             setLoading(true);
-            const response=await axios.post("http://localhost:4000/api/v1/appointment/book",myForm,{withCredentials:true}
+            const response=await axios.post("https://hospital-management-system-v5ju.onrender.com/api/v1/appointment/book",myForm,{withCredentials:true}
             
             )
             
@@ -98,7 +98,7 @@ const Appointment = () => {
    const getAppointmentHistory=async()=>{
       try {
         setLoading(false);
-        const response=await axios.get("http://localhost:4000/api/v1/appointment/details/email",{withCredentials:true})
+        const response=await axios.get("https://hospital-management-system-v5ju.onrender.com/api/v1/appointment/details/email",{withCredentials:true})
         setAppointments(response.data.appointments);
         
       } catch (error) {

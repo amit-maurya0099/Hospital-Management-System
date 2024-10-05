@@ -66,7 +66,7 @@ const AddDoctorForm = () => {
            
            try {
              setLoading(true)
-            const response=await axios.post("http://localhost:4000/api/v1/user/doctor/new",myForm,{withCredentials:true})
+            const response=await axios.post("https://hospital-management-system-v5ju.onrender.com/api/v1/user/doctor/new",myForm,{withCredentials:true})
             toast.success(response.data.message);
             setFormOpen(false);
             console.log(response.data)
