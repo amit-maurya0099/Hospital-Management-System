@@ -53,7 +53,7 @@ const Navbar = () => {
     <div className='sticky z-20 top-0  md:px-[10%] bg-white h-14  flex items-center justify-between font-serif '>
         <div className='flex items-center px-2'>
           <button className='h-full md:hidden' onClick={()=>setMenuOpen(!isMenuOpen)}><IoMenu className='size-8'/></button>  
-        <h1 className='font-semibold text-2xl px-4'> MediSync</h1>
+        <h1 className='font-semibold  text-lg md:text-2xl md:px-4 px-2'> MediSync</h1>
         </div>
          
         <div className='max-md:hidden'>
@@ -66,8 +66,8 @@ const Navbar = () => {
         {isAuthenticated ? <div> <button className='text-lg py-1 px-4 bg-sky-300 rounded-2xl' onClick={handleLogout}>Logout</button></div>
          :
            <div className='flex gap-2'>
-            <button className='text-lg py-1 px-4 bg-sky-300 rounded-2xl'onClick={()=>navigate("/register")}>Register</button>
-            <button className='text-lg py-1 px-4 bg-sky-300 rounded-2xl' onClick={()=>navigate("/login")}>Login</button>
+            <button className=' text-base md:text-lg py-1 px-4 bg-sky-300 rounded-2xl'onClick={()=>navigate("/register")}>Register</button>
+            <button className=' text-base md:text-lg py-1 px-4 bg-sky-300 rounded-2xl' onClick={()=>navigate("/login")}>Login</button>
 
             </div>
         }
