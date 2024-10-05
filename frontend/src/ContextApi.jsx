@@ -11,7 +11,7 @@ const AppProvider=({children})=>{
     const [appointments,setAppointments]=useState([]);
     const[isFormOpen,setFormOpen]=useState(false);
     const [loading,setLoading]=useState(false);
-   
+    const[isMenuOpen,setMenuOpen]=useState(false);
     const verfiyAuth=async()=>{
         try {
           let response; 
@@ -21,10 +21,10 @@ const AppProvider=({children})=>{
           
             
           if(roleFromCookie==="Patient"){ 
-          response=await axios.get("https://hospital-management-system-v5ju.onrender.com/api/v1/user/patient/me",{withCredentials:true})
+          response=await axios.get("http://localhost:4000/api/v1/user/patient/me",{withCredentials:true})
           }
           else if(roleFromCookie ==="Admin"){
-            response=await axios.get("https://hospital-management-system-v5ju.onrender.com/api/v1/user/admin/me",{withCredentials:true})
+            response=await axios.get("http://localhost:4000/api/v1/user/admin/me",{withCredentials:true})
           }
 
           if(response && response.status===200){
@@ -50,7 +50,7 @@ const AppProvider=({children})=>{
     /// get all messages
     const getAllMessages=async()=>{
       try {
-        const response=await axios.get("https://hospital-management-system-v5ju.onrender.com/api/v1/message/all",{withCredentials:true})
+        const response=await axios.get("http://localhost:4000/api/v1/message/all",{withCredentials:true})
         if(response.status===200){
           setMessages(response.data.messages);
         }
@@ -62,7 +62,7 @@ const AppProvider=({children})=>{
    // get All appointments
    const getAllAppointments=async ()=>{
     try {
-      const response=await axios.get("https://hospital-management-system-v5ju.onrender.com/api/v1/appointment/all",{withCredentials:true})
+      const response=await axios.get("http://localhost:4000/api/v1/appointment/all",{withCredentials:true})
        if(response.status ===200){
             setAppointments(response.data.appointments)
        }
@@ -86,7 +86,7 @@ const AppProvider=({children})=>{
     
     return(
 
-        <AppContext.Provider  value={{isAuthenticated,setIsAuthenticated,user,userRole,setRole,messages,appointments,getAllAppointments,isFormOpen,setFormOpen,loading,setLoading}}>
+        <AppContext.Provider  value={{isAuthenticated,setIsAuthenticated,user,userRole,setRole,messages,appointments,getAllAppointments,isFormOpen,setFormOpen,loading,setLoading,isMenuOpen,setMenuOpen}}>
             {children}
         </AppContext.Provider>
     )

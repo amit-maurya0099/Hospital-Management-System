@@ -37,7 +37,7 @@ const AddAdmin = () => {
      myForm.set("gender",gender)
 
      try {
-        const response=await axios.post("https://hospital-management-system-v5ju.onrender.com/api/v1/user/admin/addnew",myForm,{withCredentials:true})
+        const response=await axios.post("http://localhost:4000/api/v1/user/admin/addnew",myForm,{withCredentials:true})
          console.log(response);
          toast.success(response.data.message)
          setAdmin({

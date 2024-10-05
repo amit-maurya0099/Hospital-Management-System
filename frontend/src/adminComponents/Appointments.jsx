@@ -11,7 +11,7 @@ const Appointments = () => {
     try {
       
         
-      const response=await axios.put(`https://hospital-management-system-v5ju.onrender.com/api/v1/appointment/status/update/${id}`,{status:status},{withCredentials:true})
+      const response=await axios.put(`http://localhost:4000/api/v1/appointment/status/update/${id}`,{status:status},{withCredentials:true})
        if(response.status===200){
         // console.log(response.data.appointment)
         toast.success(response.data.message);
@@ -39,7 +39,7 @@ const Appointments = () => {
 
 const handleDeleteAppointment=async(id)=>{
   try {
-     const response=await axios.delete(`https://hospital-management-system-v5ju.onrender.com/api/v1/appointment/status/delete/${id}`,{withCredentials:true})
+     const response=await axios.delete(`http://localhost:4000/api/v1/appointment/status/delete/${id}`,{withCredentials:true})
      toast.success(response.data.message)
       getAllAppointments();
 

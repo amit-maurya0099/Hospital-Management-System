@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import Lottie from 'react-lottie';
 import hospitalAnimation from "./json/hospitalAnimation.json"
 import homeAnimation from "./json/homeAnimation.json"
@@ -10,6 +10,7 @@ import Loader from './Loader';
 
 const Body = () => {
     const {loading,setLoading}=useContext(AppContext);
+    
     const defaultOptionsHospital={
         autoplay:true,
         loop:true,
@@ -47,12 +48,12 @@ const Body = () => {
            <div className='md:w-[40%] object-cover'>
              <Lottie options={defaultOptionsHome} height={300}/>
            </div>
-           <div className='md:w-[40%]'>
+           <div className='md:w-[40%] px-4'>
             <h1 className='font-bold text-2xl '>Who are We ??</h1>
             <p className='text-lg' >We are a community of healthcare professionals, educators, and researchers working together to deliver top-notch medical training, conduct groundbreaking research, and provide comprehensive healthcare services. Our commitment is to equip the next generation of medical professionals with the knowledge and skills they need to thrive in a rapidly evolving healthcare environment.</p>
            </div>
        </div>
-      <div className='w-full '>
+      <div className='w-full px-4'>
         <h1 className='text-2xl font-bold'> Departments</h1>
         <div className='md:flex md:gap-4 my-4 pb-10 w-full md:overflow-x-auto md:whitespace-nowrap no-scrollbar ' >
             <div className='flex-shrink-0'>

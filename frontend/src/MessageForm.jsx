@@ -39,7 +39,7 @@ const MessageForm = () => {
       
        try{
         
-         const response = await axios.post("https://hospital-management-system-v5ju.onrender.com/api/v1/message/send", myForm, {
+         const response = await axios.post("http://localhost:4000/api/v1/message/send", myForm, {
           headers: {
             "Content-Type": "multipart/form-data", 
           }})

@@ -21,7 +21,8 @@ cloudinary.v2.config({
 })
 
 app.use(cors({
-    origin:'https://hospital-management-system-one-beige.vercel.app',
+    // origin:'https://hospital-management-system-one-beige.vercel.app',
+    origin:'http://localhost:5173',
     methods:["GET","POST","PUT","DELETE"],
     credentials:true
 }))

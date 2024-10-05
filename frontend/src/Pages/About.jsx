@@ -9,7 +9,7 @@ const About = () => {
   const getAllDoctors=async()=>{
     try {
         
-      const response=await axios.get("https://hospital-management-system-v5ju.onrender.com/api/v1/user/doctors",{withCredentials:true});
+      const response=await axios.get("http://localhost:4000/api/v1/user/doctors",{withCredentials:true});
       setDoctors(response.data.doctors)
     } catch (error) {
       console.log(error.response.data)

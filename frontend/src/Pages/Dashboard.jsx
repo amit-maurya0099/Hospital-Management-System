@@ -22,7 +22,7 @@ const Dashboard = () => {
   const handleLogout=async()=>{
     try {
       setLoading(true);
-     const response=await axios.get("https://hospital-management-system-v5ju.onrender.com/api/v1/user/admin/logout",{withCredentials:true})
+     const response=await axios.get("http://localhost:4000/api/v1/user/admin/logout",{withCredentials:true})
      
      if(response.status===200){
       setLoading(false)
