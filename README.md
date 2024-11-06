@@ -7,9 +7,9 @@ A comprehensive Hospital Management Application designed to streamline the workf
 ## Features
 - **User Authentication:** Separate login portals for patients and administrators
 - **Patient Management:** Add, update, and manage patient records with ease.
-- ** Appointment Scheduling:** Schedule, update, and cancel appointments with an intuitive calendar system.
--**Doctor Management:** Manage doctor profiles, including their schedules and specialties.
--Admin Dashboard: A dedicated admin panel to manage users, track appointments, and monitor hospital activities.
+- **Appointment Scheduling:** Schedule, update, and cancel appointments with an intuitive calendar system.
+- **Doctor Management:** Manage doctor profiles, including their schedules and specialties.
+- **Admin Dashboard:** A dedicated admin panel to manage users, track appointments, and monitor hospital activities.
 
  ## Technologies Used
 - **Frontend:** React, Redux, Tailwind CSS
